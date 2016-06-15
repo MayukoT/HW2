@@ -37,14 +37,11 @@ int main(int argc, char** argv)
   /* Write code to calculate C = A * B. */
   /**************************************/
   int k;
-  int l;
-  for (i=0; i< n; i++) {
-    for (k =0; k< n; k++){
-      for(j=0; j<n; j++){
-        l=0;
-        l+= a[i * n + j] + b[j * n + k];
+  for (i = 0; i < n; i++) {
+    for (k = 0; k < n; k++){
+      for(j = 0; j < n; j++){
+        c[i * n + k] += a[i * n + j] * b[j * n + k];
         }
-      c[i * n + k]= l;
     }
 }
 
